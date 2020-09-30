@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ImageActivity"
+    android:background="#000">
+    <RelativeLayout
+        android:paddingHorizontal="10dp"
+        android:layout_centerVertical="true"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:paddingVertical="10dp"
+            android:background="#80ffffff"
+            android:src="@drawable/ic_broken_image_black_24dp"
+            android:id="@+id/iv_image_post"
+            android:layout_width="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_height="400dp"/>
+
+    </RelativeLayout>
+
+    <com.google.android.gms.ads.AdView
+        android:layout_centerHorizontal="true"
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-3559020312196470/7887047585"
+        android:layout_height="wrap_content">
+
+    </com.google.android.gms.ads.AdView>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:padding="10dp"
+        android:gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/iv_btn_share"
+            android:text="Bagikan"
+            android:textSize="14sp"
+            android:textColor="@color/md_black_1000"
+            android:backgroundTint="@color/md_white_1000"
+            android:drawableLeft="@drawable/ic_share"/>
+
+        <Button
+            android:layout_weight="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/iv_btn_download"
+            android:textColor="@color/md_black_1000"
+            android:backgroundTint="@color/md_white_1000"
+            android:text="Unduh"
+            android:drawableLeft="@drawable/ic_file_download"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

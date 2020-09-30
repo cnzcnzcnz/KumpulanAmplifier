@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Koleksi Skema Amplifier 2020</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_about_us">About us</string>
+    <string name="nav_rate_us">Rate us</string>
+    <string name="nav_contact_us">Contact us</string>
+    <string name="nav_more_apps">More Apps</string>
+</resources>
