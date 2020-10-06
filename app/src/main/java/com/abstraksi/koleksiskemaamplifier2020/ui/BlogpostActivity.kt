@@ -5,6 +5,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.MenuItem
+import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.abstraksi.koleksiskemaamplifier2020.R
@@ -37,6 +39,11 @@ class BlogpostActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_blogpost)
+
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
+        setSupportActionBar(toolbar)
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        supportActionBar!!.setDisplayShowHomeEnabled(true)
 
         MobileAds.initialize(this){}
 
@@ -87,5 +94,17 @@ class BlogpostActivity : AppCompatActivity() {
             pDialog.dismiss()
         })
         queue.add(request)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            android.R.id.home -> {
+                super.onBackPressed()
+                true
+            }
+            else ->  // If we got here, the user's action was not recognized.
+// Invoke the superclass to handle it.
+                super.onOptionsItemSelected(item)
+        }
     }
 }

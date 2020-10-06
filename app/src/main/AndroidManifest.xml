@@ -33,7 +33,8 @@
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-3559020312196470~2826292591" />
 
-        <activity android:name=".ui.BlogpostActivity"></activity>
+        <activity android:name=".ui.BlogpostActivity"
+            android:label=""></activity>
         <activity android:name=".ui.ImageActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar"
             android:label=""/>

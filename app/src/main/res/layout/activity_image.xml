@@ -25,6 +25,7 @@
     </RelativeLayout>
 
     <com.google.android.gms.ads.AdView
+        android:layout_below="@id/appBarLayout"
         android:layout_centerHorizontal="true"
         xmlns:ads="http://schemas.android.com/apk/res-auto"
         android:id="@+id/adView"
@@ -65,5 +66,21 @@
             android:drawableLeft="@drawable/ic_file_download"/>
 
     </LinearLayout>
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#000"
+        android:gravity="center_horizontal"
+        android:textAlignment="center"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
+    </com.google.android.material.appbar.AppBarLayout>
 
 </RelativeLayout>

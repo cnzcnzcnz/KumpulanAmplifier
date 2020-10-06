@@ -10,11 +10,11 @@
     android:padding="16dp"
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
-<!--    <ImageView-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="150dp"-->
-<!--        android:paddingTop="16dp"-->
-<!--        android:src="@drawable/navdrawerimage"/>-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:paddingTop="16dp"
+        android:src="@drawable/navdrawerimage"/>
 
     <TextView
         android:id="@+id/tv_app_name"

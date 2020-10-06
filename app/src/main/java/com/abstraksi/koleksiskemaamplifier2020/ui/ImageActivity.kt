@@ -14,8 +14,10 @@ import android.os.Bundle
 import android.os.Environment
 import android.util.DisplayMetrics
 import android.util.Log
+import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.widget.Toolbar
 import androidx.core.content.FileProvider
 import com.abstraksi.koleksiskemaamplifier2020.R
 import com.google.android.gms.ads.AdRequest
@@ -47,6 +49,11 @@ class ImageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_image)
 
+        val toolbar = findViewById<Toolbar>(R.id.toolbar)
+        setSupportActionBar(toolbar)
+        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        supportActionBar!!.setDisplayShowHomeEnabled(true)
+
         pDialog = ProgressDialog(this)
 
         val metrics = DisplayMetrics()
@@ -59,6 +66,7 @@ class ImageActivity : AppCompatActivity() {
         mAdView = findViewById(R.id.adView)
         val testDeviceId = ArrayList<String>()
         testDeviceId.add(AdRequest.DEVICE_ID_EMULATOR)
+
 
 
 
@@ -213,6 +221,18 @@ class ImageActivity : AppCompatActivity() {
                 builder.setNegativeButton("OK", null)
                 builder.show()
             }
+        }
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            android.R.id.home -> {
+                super.onBackPressed()
+                true
+            }
+            else ->  // If we got here, the user's action was not recognized.
+// Invoke the superclass to handle it.
+                super.onOptionsItemSelected(item)
         }
     }
 }
